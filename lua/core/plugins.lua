@@ -5,11 +5,20 @@ local astro_plugins = {
   -- Optimiser
   ["lewis6991/impatient.nvim"] = {},
 
+  -- Copilot
+  ["github/copilot.vim"] = {},
+
   -- Lua functions
   ["nvim-lua/plenary.nvim"] = { module = "plenary" },
 
   -- Popup API
   ["nvim-lua/popup.nvim"] = {},
+
+  -- Harpoon
+  ["ThePrimeagen/harpoon"] = {},
+
+  -- Vim Wiki
+  ["vimwiki/vimwiki"] = {},
 
   -- Indent detection
   ["Darazaki/indent-o-matic"] = {
@@ -232,12 +241,6 @@ local astro_plugins = {
   ["declancm/cinnamon.nvim"] = {
     event = { "BufRead", "BufNewFile" },
     config = function() require "configs.cinnamon" end,
-  },
-
-  -- Smooth escaping
-  ["max397574/better-escape.nvim"] = {
-    event = "InsertCharPre",
-    config = function() require "configs.better_escape" end,
   },
 
   -- Get extra JSON schemas

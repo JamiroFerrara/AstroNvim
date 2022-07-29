@@ -1,6 +1,6 @@
 local is_available = astronvim.is_available
 
-local maps = { n = {}, v = {}, t = {}, [""] = {} }
+local maps = { n = {}, v = {}, t = {}, i = {}, [""] = {} }
 
 maps[""]["<Space>"] = "<Nop>"
 
@@ -8,7 +8,41 @@ maps[""]["<Space>"] = "<Nop>"
 -- Standard Operations
 maps.n["<leader>w"] = { "<cmd>w<cr>", desc = "Save" }
 maps.n["<leader>q"] = { "<cmd>q<cr>", desc = "Quit" }
-maps.n["<leader>h"] = { "<cmd>nohlsearch<cr>", desc = "No Highlight" }
+maps.n["f"] = { "/" }
+maps.n["F"] = { "?" }
+maps.n["<leader>d"] = { "ryiw/<C-r>r<cr>" }
+maps.n["U"] = { ":redo<cr>" }
+maps.n["Y"] = { "y$" }
+maps.n["J"] = { "<S-}>" }
+maps.n["K"] = { "<S-{>" }
+maps.n["L"] = { "J" }
+
+maps.i["jk"] = { "<esc>:w<cr>" }
+maps.i["jj"] = { "<esc>" }
+maps.i["jè"] = { "<esc><S-a>{<enter>}<esc>ko<tab>" }
+maps.i["ji"] = { "<esc>lli<space>" }
+maps.i["jo"] = { "<esc>o" }
+maps.i["jO"] = { "<esc>ko" }
+maps.i["jy"] = { "<esc>yy<esc>p" }
+maps.i["jd"] = { "<esc>dd" }
+maps.i["jl"] = { "<esc>la" }
+maps.i["jl"] = { "<esc>la" }
+maps.i["jf"] = { "<esc>A<space>from<space>" }
+maps.i["j0"] = { "<esc>A<space>=<space>" }
+
+maps.n["<leader>m"] = { ':lua require("harpoon.mark").add_file()<cr>' }
+maps.n["<leader>M"] = { ':lua require("harpoon.ui").toggle_quick_menu()<cr>' }
+maps.n["1"] = { ':lua require("harpoon.ui").nav_file(1)<cr>' }
+maps.n["2"] = { ':lua require("harpoon.ui").nav_file(2)<cr>' }
+maps.n["3"] = { ':lua require("harpoon.ui").nav_file(3)<cr>' }
+maps.n["4"] = { ':lua require("harpoon.ui").nav_file(4)<cr>' }
+maps.n["5"] = { ':lua require("harpoon.ui").nav_file(5)<cr>' }
+maps.n["6"] = { ':lua require("harpoon.ui").nav_file(6)<cr>' }
+maps.n["7"] = { ':lua require("harpoon.ui").nav_file(7)<cr>' }
+maps.n["8"] = { ':lua require("harpoon.ui").nav_file(8)<cr>' }
+
+maps.i[";;"] = { "<esc>A;<esc>" }
+
 maps.n["<leader>u"] = { function() astronvim.toggle_url_match() end, desc = "Toggle URL Highlights" }
 maps.n["<leader>fn"] = { "<cmd>enew<cr>", desc = "New File" }
 maps.n["gx"] = { function() astronvim.url_opener() end, desc = "Open the file under cursor with system app" }
@@ -130,6 +164,7 @@ if is_available "telescope.nvim" then
   maps.n["<leader>gb"] = { function() require("telescope.builtin").git_branches() end, desc = "Git branches" }
   maps.n["<leader>gc"] = { function() require("telescope.builtin").git_commits() end, desc = "Git commits" }
   maps.n["<leader>ff"] = { function() require("telescope.builtin").find_files() end, desc = "Search files" }
+  maps.n["<C-p>"] = { function() require("telescope.builtin").find_files() end, desc = "Search files" }
   maps.n["<leader>fF"] = {
     function() require("telescope.builtin").find_files { hidden = true, no_ignore = true } end,
     desc = "Search all files",
