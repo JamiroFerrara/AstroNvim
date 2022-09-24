@@ -8,6 +8,7 @@ maps[""]["<Space>"] = "<Nop>"
 -- Standard Operations
 maps.n["<leader>w"] = { "<cmd>w<cr>", desc = "Save" }
 maps.n["<leader>q"] = { "<cmd>q<cr>", desc = "Quit" }
+maps.n["<A-q>"] = { "<cmd>q<cr>", desc = "Quit" }
 maps.n["f"] = { "/" }
 maps.n["F"] = { "?" }
 maps.n["<leader>d"] = { "ryiw/<C-r>r<cr>" }
@@ -30,16 +31,20 @@ maps.i["jl"] = { "<esc>la" }
 maps.i["jf"] = { "<esc>A<space>from<space>" }
 maps.i["j0"] = { "<esc>A<space>=<space>" }
 
+maps.i["è"] = { "{}<esc>i" }
+maps.n["è"] = { "i{}<esc>i" }
+maps.n[";"] = { "A;<esc>" }
+
 maps.n["<leader>m"] = { ':lua require("harpoon.mark").add_file()<cr>' }
 maps.n["<leader>M"] = { ':lua require("harpoon.ui").toggle_quick_menu()<cr>' }
-maps.n["1"] = { ':lua require("harpoon.ui").nav_file(1)<cr>' }
-maps.n["2"] = { ':lua require("harpoon.ui").nav_file(2)<cr>' }
-maps.n["3"] = { ':lua require("harpoon.ui").nav_file(3)<cr>' }
-maps.n["4"] = { ':lua require("harpoon.ui").nav_file(4)<cr>' }
-maps.n["5"] = { ':lua require("harpoon.ui").nav_file(5)<cr>' }
-maps.n["6"] = { ':lua require("harpoon.ui").nav_file(6)<cr>' }
-maps.n["7"] = { ':lua require("harpoon.ui").nav_file(7)<cr>' }
-maps.n["8"] = { ':lua require("harpoon.ui").nav_file(8)<cr>' }
+maps.n["<leader>1"] = { ':lua require("harpoon.ui").nav_file(1)<cr>' }
+maps.n["<leader>2"] = { ':lua require("harpoon.ui").nav_file(2)<cr>' }
+maps.n["<leader>3"] = { ':lua require("harpoon.ui").nav_file(3)<cr>' }
+maps.n["<leader>4"] = { ':lua require("harpoon.ui").nav_file(4)<cr>' }
+maps.n["<leader>5"] = { ':lua require("harpoon.ui").nav_file(5)<cr>' }
+maps.n["<leader>6"] = { ':lua require("harpoon.ui").nav_file(6)<cr>' }
+maps.n["<leader>7"] = { ':lua require("harpoon.ui").nav_file(7)<cr>' }
+maps.n["<leader>8"] = { ':lua require("harpoon.ui").nav_file(8)<cr>' }
 
 maps.i[";;"] = { "<esc>A;<esc>" }
 
@@ -151,8 +156,8 @@ if is_available "aerial.nvim" then maps.n["<leader>lS"] = { "<cmd>AerialToggle<c
 
 -- Telescope
 if is_available "telescope.nvim" then
-  maps.n["<leader>fw"] = { function() require("telescope.builtin").live_grep() end, desc = "Search words" }
-  maps.n["<leader>fW"] = {
+  maps.n["<leader>ps"] = { function() require("telescope.builtin").live_grep() end, desc = "Search words" }
+  maps.n["<leader>pS"] = {
     function()
       require("telescope.builtin").live_grep {
         additional_args = function(args) return vim.list_extend(args, { "--hidden", "--no-ignore" }) end,

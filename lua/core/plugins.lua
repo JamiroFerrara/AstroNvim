@@ -8,8 +8,17 @@ local astro_plugins = {
   -- Copilot
   ["github/copilot.vim"] = {},
 
+  -- Nvim Comment
+  ["terrortylor/nvim-comment"] = {},
+
+  -- Css Color
+  ["ap/vim-css-color"] = {},
+
   -- Lua functions
   ["nvim-lua/plenary.nvim"] = { module = "plenary" },
+
+  -- Github Colorscheme
+  ["projekt0n/github-nvim-theme"] = {},
 
   -- Popup API
   ["nvim-lua/popup.nvim"] = {},
