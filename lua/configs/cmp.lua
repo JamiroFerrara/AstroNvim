@@ -78,7 +78,7 @@ setup(astronvim.user_plugin_opts("plugins.cmp", {
       i = cmp.mapping.abort(),
       c = cmp.mapping.close(),
     },
-    ["<CR>"] = cmp.mapping.confirm { select = false },
+    ["<CR>"] = cmp.mapping.confirm { select = true },
     ["<S-Tab>"] = cmp.mapping(function(fallback)
       if cmp.visible() then
         cmp.select_prev_item()

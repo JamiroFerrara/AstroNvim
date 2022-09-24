@@ -176,7 +176,6 @@ if is_available "telescope.nvim" then
   }
   maps.n["<leader>fb"] = { function() require("telescope.builtin").buffers() end, desc = "Search buffers" }
   maps.n["<leader>fh"] = { function() require("telescope.builtin").help_tags() end, desc = "Search help" }
-  maps.n["<leader>fm"] = { function() require("telescope.builtin").marks() end, desc = "Search marks" }
   maps.n["<leader>fo"] = { function() require("telescope.builtin").oldfiles() end, desc = "Search history" }
   maps.n["<leader>fc"] =
     { function() require("telescope.builtin").grep_string() end, desc = "Search for word under cursor" }
@@ -187,6 +186,7 @@ if is_available "telescope.nvim" then
     { function() require("telescope").extensions.notify.notify() end, desc = "Search notifications" }
   maps.n["<leader>sr"] = { function() require("telescope.builtin").registers() end, desc = "Search registers" }
   maps.n["<leader>sk"] = { function() require("telescope.builtin").keymaps() end, desc = "Search keymaps" }
+  maps.n["<leader>fm"] = { function() require("telescope.builtin").keymaps() end, desc = "Search keymaps" }
   maps.n["<leader>sc"] = { function() require("telescope.builtin").commands() end, desc = "Search commands" }
   maps.n["<leader>ls"] = {
     function()
