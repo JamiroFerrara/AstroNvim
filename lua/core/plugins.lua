@@ -29,6 +29,9 @@ local astro_plugins = {
   -- Vim Wiki
   ["vimwiki/vimwiki"] = {},
 
+  -- Lightspeed
+  ['ggandor/lightspeed.nvim'] = {},
+
   -- Indent detection
   ["Darazaki/indent-o-matic"] = {
     event = "BufReadPost",

@@ -18,7 +18,7 @@ local config = {
   },
 
   -- Set colorscheme
-  colorscheme = "default_theme",
+  colorscheme = "github-theme",
 
   -- Override highlight groups in any theme
   highlights = {
@@ -52,13 +52,13 @@ local config = {
     },
     plugins = { -- enable or disable extra plugin highlighting
       aerial = true,
-      beacon = false,
+      beacon = true,
       bufferline = true,
       dashboard = true,
       highlighturl = true,
       hop = false,
       indent_blankline = true,
-      lightspeed = false,
+      lightspeed = true,
       ["neo-tree"] = true,
       notify = true,
       ["nvim-tree"] = false,

@@ -18,14 +18,14 @@ end
 for plugin, enabled in
   pairs(user_plugin_opts("default_theme.plugins", {
     aerial = true,
-    beacon = false,
+    beacon = true,
     bufferline = true,
     dashboard = true,
     gitsigns = true,
     highlighturl = true,
     hop = false,
     indent_blankline = true,
-    lightspeed = false,
+    lightspeed = true,
     ["neo-tree"] = true,
     notify = true,
     ["nvim-tree"] = false,
