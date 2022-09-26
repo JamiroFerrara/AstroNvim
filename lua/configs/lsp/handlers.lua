@@ -6,7 +6,6 @@ astronvim.lsp.on_attach = function(client, bufnr)
   astronvim.set_mappings(
     user_plugin_opts("lsp.mappings", {
       n = {
-        ["K"] = { function() vim.lsp.buf.hover() end, desc = "Hover symbol details" },
         ["<leader>la"] = { function() vim.lsp.buf.code_action() end, desc = "LSP code action" },
         ["<leader>lf"] = { function() vim.lsp.buf.formatting_sync() end, desc = "Format code" },
         ["<leader>lh"] = { function() vim.lsp.buf.signature_help() end, desc = "Signature help" },
