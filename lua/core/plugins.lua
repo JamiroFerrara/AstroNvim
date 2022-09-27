@@ -5,6 +5,15 @@ local astro_plugins = {
   -- Optimiser
   ["lewis6991/impatient.nvim"] = {},
 
+  -- Lua functions
+  ["nvim-lua/plenary.nvim"] = { module = "plenary" },
+
+  -- Popup API
+  ["nvim-lua/popup.nvim"] = {},
+   
+  -- Rust tools
+  ["simrat39/rust-tools.nvim"] = {},
+
   -- Copilot
   ["github/copilot.vim"] = {},
 
@@ -14,22 +23,11 @@ local astro_plugins = {
   -- Css Color
   ["ap/vim-css-color"] = {},
 
-  -- Lua functions
-  ["nvim-lua/plenary.nvim"] = { module = "plenary" },
-
   -- Harpoon
   ["ThePrimeagen/harpoon"] = {},
 
   -- Vim Wiki
   ["vimwiki/vimwiki"] = {},
-
-  -- Lightspeed
-  ['ggandor/lightspeed.nvim'] = {},
-
-  -- Popup API
-  ["nvim-lua/popup.nvim"] = {},
-  
-  ["mfussenegger/nvim-dap"] = {},
 
   -- Indent detection
   ["Darazaki/indent-o-matic"] = {
@@ -48,7 +46,7 @@ local astro_plugins = {
     event = "VimEnter",
     config = function() require "configs.dressing" end,
   },
-  
+
   -- Cursorhold fix
   ["antoinemadec/FixCursorHold.nvim"] = {
     event = { "BufRead", "BufNewFile" },
@@ -72,6 +70,9 @@ local astro_plugins = {
     module = "lspkind",
     config = function() require "configs.lspkind" end,
   },
+
+  -- LSP Extensions
+  ["nvim-lua/lsp_extensions.nvim"] = {},
 
   -- Bufferline
   ["akinsho/bufferline.nvim"] = {

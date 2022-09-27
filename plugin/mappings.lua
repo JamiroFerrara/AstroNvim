@@ -26,8 +26,8 @@ map('n', '<leader>o', 'za', {noremap = true, silent = false})
 map('n', '<leader>b', '$j?{<cr>V%', {noremap = true, silent = false})
 map('n', '<leader>P', ':Prettier<cr>', {noremap = true, silent = false})
 
-map('i', 'jj', '<esc>:w<cr>', {noremap = false, silent = false})
-map('i', 'jJ', '<esc>:q!<cr>', {noremap = false, silent = false})
+-- map('i', 'jj', '<esc>:w<cr>', {noremap = false, silent = false})
+-- map('i', 'jJ', '<esc>:q!<cr>', {noremap = false, silent = false})
 
 map('i', 'jk', '<esc><S-a>', {noremap = false, silent = false})
 map('i', 'jè', '<esc><S-a>{<enter><esc>ddO', {noremap = false, silent = false})
