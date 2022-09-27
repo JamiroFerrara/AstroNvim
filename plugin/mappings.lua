@@ -81,4 +81,6 @@ map('n', 'vt8', 'vt(', {noremap = true, silent = false})
 map('i', ';;', '<esc>A;<esc>', {noremap = true, silent = false})
 map('n', 'è', 'i{}<esc>i', {noremap = true, silent = false})
 
+map('n', '<A-q>', ':q!<cr>', {noremap = true, silent = false})
+
 -- map('n', '<leader>r', ':s/\(w.*\)/', {noremap = true, silent = false})
