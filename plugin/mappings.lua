@@ -78,4 +78,7 @@ map('n', 'ya2', 'ya"', {noremap = true, silent = false})
 map('n', 'vtè', 'vt{', {noremap = true, silent = false})
 map('n', 'vt8', 'vt(', {noremap = true, silent = false})
 
+map('i', ';;', '<esc>A;<esc>', {noremap = true, silent = false})
+map('n', 'è', 'i{}<esc>i', {noremap = true, silent = false})
+
 -- map('n', '<leader>r', ':s/\(w.*\)/', {noremap = true, silent = false})
