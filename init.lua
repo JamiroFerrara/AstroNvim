@@ -66,4 +66,4 @@ vim.api.nvim_command('set foldlevel=2')
 
 vim.g.mapleader = " "
 
-require('github-theme').setup()
+-- require('github-theme').setup()
