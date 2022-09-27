@@ -57,6 +57,7 @@ vim.api.nvim_command('set nowrap')
 vim.api.nvim_command('set mouse=a')
 vim.api.nvim_command('set undofile')
 vim.api.nvim_command('set noswapfile')
+vim.api.nvim_command('set nospell')
 
 vim.api.nvim_command('set foldmethod=syntax')
 vim.api.nvim_command('set foldnestmax=1')

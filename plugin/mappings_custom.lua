@@ -15,8 +15,10 @@ map('n', 'J', '<S-}>', {noremap = true, silent = false})
 map('n', 'K', '<S-{>', {noremap = true, silent = false})
 map('n', 'L', 'J', {noremap = true, silent = false})
 
-map('n', 'f', '/', {noremap = true, silent = false})
-map('n', 'F', '?', {noremap = true, silent = false})
+map('n', 's', '/', {noremap = true, silent = false})
+map('n', 'S', '?', {noremap = true, silent = false})
+map('n', 'f', '<Plug>Lightspeed_s', {noremap = true, silent = false})
+map('n', 'F', '<Plug>Lightspeed_S', {noremap = true, silent = false})
 map('n', '<leader>f', ':HopWord<cr>', {noremap = true, silent = false})
 map('n', '<leader>d', '"ryiw/<C-r>r<cr>', {noremap = true, silent = false})
 
