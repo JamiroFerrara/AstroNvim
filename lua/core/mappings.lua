@@ -1,6 +1,6 @@
 local is_available = astronvim.is_available
 
-local maps = { n = {}, v = {}, t = {}, [""] = {} }
+local maps = { n = {}, v = {}, t = {}, i = {}, [""] = {} }
 
 maps[""]["<Space>"] = "<Nop>"
 
@@ -8,7 +8,46 @@ maps[""]["<Space>"] = "<Nop>"
 -- Standard Operations
 maps.n["<leader>w"] = { "<cmd>w<cr>", desc = "Save" }
 maps.n["<leader>q"] = { "<cmd>q<cr>", desc = "Quit" }
-maps.n["<leader>h"] = { "<cmd>nohlsearch<cr>", desc = "No Highlight" }
+maps.n["<A-q>"] = { "<cmd>q<cr>", desc = "Quit" }
+maps.n["f"] = { "/" }
+maps.n["F"] = { "?" }
+maps.n["<leader>d"] = { "ryiw/<C-r>r<cr>" }
+maps.n["U"] = { ":redo<cr>" }
+maps.n["Y"] = { "y$" }
+maps.n["J"] = { "<S-}>" }
+maps.n["K"] = { "<S-{>" }
+maps.n["L"] = { "J" }
+
+maps.i["jk"] = { "<esc>:w<cr>" }
+maps.i["jj"] = { "<esc>" }
+maps.i["jè"] = { "<esc><S-a>{<enter>}<esc>ko<tab>" }
+maps.i["ji"] = { "<esc>lli<space>" }
+maps.i["jo"] = { "<esc>o" }
+maps.i["jO"] = { "<esc>ko" }
+maps.i["jy"] = { "<esc>yy<esc>p" }
+maps.i["jd"] = { "<esc>dd" }
+maps.i["jl"] = { "<esc>la" }
+maps.i["jl"] = { "<esc>la" }
+maps.i["jf"] = { "<esc>A<space>from<space>" }
+maps.i["j0"] = { "<esc>A<space>=<space>" }
+
+maps.i["è"] = { "{}<esc>i" }
+maps.n["è"] = { "i{}<esc>i" }
+maps.n[";"] = { "A;<esc>" }
+
+maps.n["<leader>m"] = { ':lua require("harpoon.mark").add_file()<cr>' }
+maps.n["<leader>M"] = { ':lua require("harpoon.ui").toggle_quick_menu()<cr>' }
+maps.n["<leader>1"] = { ':lua require("harpoon.ui").nav_file(1)<cr>' }
+maps.n["<leader>2"] = { ':lua require("harpoon.ui").nav_file(2)<cr>' }
+maps.n["<leader>3"] = { ':lua require("harpoon.ui").nav_file(3)<cr>' }
+maps.n["<leader>4"] = { ':lua require("harpoon.ui").nav_file(4)<cr>' }
+maps.n["<leader>5"] = { ':lua require("harpoon.ui").nav_file(5)<cr>' }
+maps.n["<leader>6"] = { ':lua require("harpoon.ui").nav_file(6)<cr>' }
+maps.n["<leader>7"] = { ':lua require("harpoon.ui").nav_file(7)<cr>' }
+maps.n["<leader>8"] = { ':lua require("harpoon.ui").nav_file(8)<cr>' }
+
+maps.i[";;"] = { "<esc>A;<esc>" }
+
 maps.n["<leader>u"] = { function() astronvim.toggle_url_match() end, desc = "Toggle URL Highlights" }
 maps.n["<leader>fn"] = { "<cmd>enew<cr>", desc = "New File" }
 maps.n["gx"] = { function() astronvim.url_opener() end, desc = "Open the file under cursor with system app" }
@@ -46,9 +85,9 @@ end
 
 -- Comment
 if is_available "Comment.nvim" then
-  maps.n["<leader>/"] = { function() require("Comment.api").toggle.linewise.current() end, desc = "Comment line" }
+  maps.n["<leader>/"] = { function() require("Comment.api").toggle_current_linewise() end, desc = "Comment line" }
   maps.v["<leader>/"] = {
-    "<esc><cmd>lua require('Comment.api').toggle.linewise(vim.fn.visualmode())<cr>",
+    "<esc><cmd>lua require('Comment.api').toggle_linewise_op(vim.fn.visualmode())<cr>",
     desc = "Toggle comment line",
   }
 end
@@ -77,17 +116,16 @@ if is_available "neovim-session-manager" then
   maps.n["<leader>sl"] = { "<cmd>SessionManager! load_last_session<cr>", desc = "Load last session" }
   maps.n["<leader>ss"] = { "<cmd>SessionManager! save_current_session<cr>", desc = "Save this session" }
   maps.n["<leader>sd"] = { "<cmd>SessionManager! delete_session<cr>", desc = "Delete session" }
-  maps.n["<leader>sf"] = { "<cmd>SessionManager! load_session<cr>", desc = "Search sessions" }
-  maps.n["<leader>s."] =
+  maps.n["<leader>sf"] = { "<cmd>SessionManager! load_session<cr> ", desc = "Search sessions" }
+  maps.n["<leader>S."] =
     { "<cmd>SessionManager! load_current_dir_session<cr>", desc = "Load current directory session" }
 end
 
--- Package Manager
--- TODO: v2 rework these key bindings to be more general
-if is_available "mason.nvim" then maps.n["<leader>lI"] = { "<cmd>Mason<cr>", desc = "LSP installer" } end
-
 -- LSP Installer
-if is_available "mason-lspconfig.nvim" then maps.n["<leader>li"] = { "<cmd>LspInfo<cr>", desc = "LSP information" } end
+if is_available "nvim-lsp-installer" then
+  maps.n["<leader>li"] = { "<cmd>LspInfo<cr>", desc = "LSP information" }
+  maps.n["<leader>lI"] = { "<cmd>LspInstallInfo<cr>", desc = "LSP installer" }
+end
 
 -- Smart Splits
 if is_available "smart-splits.nvim" then
@@ -118,8 +156,8 @@ if is_available "aerial.nvim" then maps.n["<leader>lS"] = { "<cmd>AerialToggle<c
 
 -- Telescope
 if is_available "telescope.nvim" then
-  maps.n["<leader>fw"] = { function() require("telescope.builtin").live_grep() end, desc = "Search words" }
-  maps.n["<leader>fW"] = {
+  maps.n["<leader>ps"] = { function() require("telescope.builtin").live_grep() end, desc = "Search words" }
+  maps.n["<leader>pS"] = {
     function()
       require("telescope.builtin").live_grep {
         additional_args = function(args) return vim.list_extend(args, { "--hidden", "--no-ignore" }) end,
@@ -138,7 +176,6 @@ if is_available "telescope.nvim" then
   }
   maps.n["<leader>fb"] = { function() require("telescope.builtin").buffers() end, desc = "Search buffers" }
   maps.n["<leader>fh"] = { function() require("telescope.builtin").help_tags() end, desc = "Search help" }
-  maps.n["<leader>fm"] = { function() require("telescope.builtin").marks() end, desc = "Search marks" }
   maps.n["<leader>fo"] = { function() require("telescope.builtin").oldfiles() end, desc = "Search history" }
   maps.n["<leader>fc"] =
     { function() require("telescope.builtin").grep_string() end, desc = "Search for word under cursor" }
@@ -149,6 +186,7 @@ if is_available "telescope.nvim" then
     { function() require("telescope").extensions.notify.notify() end, desc = "Search notifications" }
   maps.n["<leader>sr"] = { function() require("telescope.builtin").registers() end, desc = "Search registers" }
   maps.n["<leader>sk"] = { function() require("telescope.builtin").keymaps() end, desc = "Search keymaps" }
+  maps.n["<leader>fm"] = { function() require("telescope.builtin").keymaps() end, desc = "Search keymaps" }
   maps.n["<leader>sc"] = { function() require("telescope.builtin").commands() end, desc = "Search commands" }
   maps.n["<leader>ls"] = {
     function()
@@ -161,8 +199,6 @@ if is_available "telescope.nvim" then
     end,
     desc = "Search symbols",
   }
-  maps.n["<leader>lG"] =
-    { function() require("telescope.builtin").lsp_workspace_symbols() end, desc = "Search workspace symbols" }
   maps.n["<leader>lR"] = { function() require("telescope.builtin").lsp_references() end, desc = "Search references" }
   maps.n["<leader>lD"] = { function() require("telescope.builtin").diagnostics() end, desc = "Search diagnostics" }
 end
@@ -185,17 +221,6 @@ end
 -- Stay in indent mode
 maps.v["<"] = { "<gv", desc = "unindent line" }
 maps.v[">"] = { ">gv", desc = "indent line" }
-
-maps.n["<leader>m"] = { ':lua require("harpoon.mark").add_file()<cr>' }
-maps.n["<leader>M"] = { ':lua require("harpoon.ui").toggle_quick_menu()<cr>' }
-maps.n["<leader>1"] = { ':lua require("harpoon.ui").nav_file(1)<cr>' }
-maps.n["<leader>2"] = { ':lua require("harpoon.ui").nav_file(2)<cr>' }
-maps.n["<leader>3"] = { ':lua require("harpoon.ui").nav_file(3)<cr>' }
-maps.n["<leader>4"] = { ':lua require("harpoon.ui").nav_file(4)<cr>' }
-maps.n["<leader>5"] = { ':lua require("harpoon.ui").nav_file(5)<cr>' }
-maps.n["<leader>6"] = { ':lua require("harpoon.ui").nav_file(6)<cr>' }
-maps.n["<leader>7"] = { ':lua require("harpoon.ui").nav_file(7)<cr>' }
-maps.n["<leader>8"] = { ':lua require("harpoon.ui").nav_file(8)<cr>' }
 
 -- Improved Terminal Mappings
 maps.t["<esc>"] = { "<C-\\><C-n>", desc = "Terminal normal mode" }

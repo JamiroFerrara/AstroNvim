@@ -1,1 +1,1 @@
-autocmd BufRead,BufEnter *.astro set filetype=tsx
+autocmd BufRead,BufEnter *.astro set filetype=astro
