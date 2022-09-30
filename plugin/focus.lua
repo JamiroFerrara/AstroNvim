@@ -7,4 +7,4 @@ require("focus").setup({winhighlight = true})
 --   hi default link UnfocusedWindow Normal
 -- To change them, you can link them to a different highlight group, see `:h hi-default` for more info.
 vim.cmd('hi link UnfocusedWindow BufferLineTabSeparator')
--- vim.cmd('hi link FocusedWindow EndOfBufger')
+vim.cmd('hi link FocusedWindow EndOfBufger')
