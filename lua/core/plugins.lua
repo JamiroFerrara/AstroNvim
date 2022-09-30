@@ -32,6 +32,21 @@ local astro_plugins = {
   -- Lightspeed
   ['ggandor/lightspeed.nvim'] = {},
 
+  -- Omnisharp-vim
+  ['OmniSharp/omnisharp-vim'] = {},
+
+  -- haya14busa/is.vim
+  ['haya14busa/is.vim'] = {},
+  
+  -- nvim/Surround
+  ['kylechui/nvim-surround'] = {},
+
+  -- nvim shade
+  ['sunjon/shade.nvim'] = {},
+
+  -- substitute 
+  ['gbprod/substitute.nvim'] = {},
+
   -- Indent detection
   ["Darazaki/indent-o-matic"] = {
     event = "BufReadPost",
