@@ -35,6 +35,9 @@ local astro_plugins = {
   -- Omnisharp-vim
   ['OmniSharp/omnisharp-vim'] = {},
 
+  -- Focus window manager
+  ["beauwilliams/focus.nvim"] = {},
+
   -- haya14busa/is.vim
   ['haya14busa/is.vim'] = {},
   
@@ -51,12 +54,6 @@ local astro_plugins = {
   ["Darazaki/indent-o-matic"] = {
     event = "BufReadPost",
     config = function() require "configs.indent-o-matic" end,
-  },
-
-  -- Notification Enhancer
-  ["rcarriga/nvim-notify"] = {
-    event = "VimEnter",
-    config = function() require "configs.notify" end,
   },
 
   -- Neovim UI Enhancer
