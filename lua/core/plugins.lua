@@ -45,7 +45,7 @@ local astro_plugins = {
   ['kylechui/nvim-surround'] = {},
 
   -- nvim shade
-  ['sunjon/shade.nvim'] = {},
+  -- ['sunjon/shade.nvim'] = {},
 
   -- substitute 
   ['gbprod/substitute.nvim'] = {},
