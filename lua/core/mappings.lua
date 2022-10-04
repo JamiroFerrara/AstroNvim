@@ -65,13 +65,6 @@ maps.n["<leader>pu"] = { "<cmd>PackerUpdate<cr>", desc = "Packer Update" }
 -- Alpha
 if is_available "alpha-nvim" then maps.n["<leader>d"] = { "<cmd>Alpha<cr>", desc = "Alpha Dashboard" } end
 
--- Bufdelete
-if is_available "bufdelete.nvim" then
-  maps.n["<leader>c"] = { "<cmd>Bdelete<cr>", desc = "Close window" }
-else
-  maps.n["<leader>c"] = { "<cmd>bdelete<cr>", desc = "Close window" }
-end
-
 -- Navigate buffers
 if is_available "bufferline.nvim" then
   maps.n["<S-l>"] = { "<cmd>BufferLineCycleNext<cr>", desc = "Next buffer tab" }
