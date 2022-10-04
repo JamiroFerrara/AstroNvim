@@ -81,10 +81,10 @@ local astro_plugins = {
   },
 
   -- Bufferline
-  ["akinsho/bufferline.nvim"] = {
-    after = "nvim-web-devicons",
-    config = function() require "configs.bufferline" end,
-  },
+--  ["akinsho/bufferline.nvim"] = {
+ --   after = "nvim-web-devicons",
+  --  config = function() require "configs.bufferline" end,
+ -- },
 
   -- Better buffer closing
   ["famiu/bufdelete.nvim"] = { cmd = { "Bdelete", "Bwipeout" } },
@@ -217,11 +217,11 @@ local astro_plugins = {
   },
 
   -- Start screen
-  ["goolord/alpha-nvim"] = {
-    cmd = "Alpha",
-    module = "alpha",
-    config = function() require "configs.alpha" end,
-  },
+--  ["goolord/alpha-nvim"] = {
+ --   cmd = "Alpha",
+  --  module = "alpha",
+   -- config = function() require "configs.alpha" end,
+ -- },
 
   -- Color highlighting
   ["norcalli/nvim-colorizer.lua"] = {
