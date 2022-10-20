@@ -223,4 +223,12 @@ maps.t["<C-j>"] = { "<c-\\><c-n><c-w>j", desc = "Terminal down window navigation
 maps.t["<C-k>"] = { "<c-\\><c-n><c-w>k", desc = "Terminal up window navigation" }
 maps.t["<C-l>"] = { "<c-\\><c-n><c-w>l", desc = "Terminal right window naviation" }
 
+-- Trouble Mappings
+maps.n["<leader>xx"] = { "<cmd>TroubleToggle<cr>", desc = "Opens trouble error diagnostics" }
+maps.n["<leader>xw"] = { "<cmd>TroubleToggle workspace_diagnostics<cr>", desc = "Opens trouble workspace_diagnostics" }
+maps.n["<leader>xd"] = { "<cmd>TroubleToggle document_diagnostics<cr>", desc = "Opens trouble document_diagnostics" }
+maps.n["<leader>xq"] = { "<cmd>TroubleToggle quickfix", desc = "Opens trouble quickfix" }
+maps.n["<leader>xl"] = { "<cmd>TroubleToggle loclist<cr>", desc = "Opens trouble loclist" }
+maps.n["gR"] = { "<cmd>TroubleToggle lsp_references<cr>", desc = "trouble lsp references" }
+
 astronvim.set_mappings(astronvim.user_plugin_opts("mappings", maps))

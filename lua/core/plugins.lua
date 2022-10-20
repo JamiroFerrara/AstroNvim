@@ -164,6 +164,9 @@ local astro_plugins = {
     after = "nvim-cmp",
     config = function() astronvim.add_user_cmp_source "path" end,
   },
+  
+  -- LSP completion source
+  ['folke/trouble.nvim'] = { },
 
   -- LSP completion source
   ["hrsh7th/cmp-nvim-lsp"] = {

@@ -1,3 +1,4 @@
+local trouble = require("trouble.providers.telescope")
 local status_ok, telescope = pcall(require, "telescope")
 if not status_ok then return end
 local actions = require "telescope.actions"
@@ -44,7 +45,6 @@ telescope.setup(astronvim.user_plugin_opts("plugins.telescope", {
         ["<CR>"] = actions.select_default,
         ["<C-x>"] = actions.select_horizontal,
         ["<C-v>"] = actions.select_vertical,
-        ["<C-t>"] = actions.select_tab,
 
         ["<C-u>"] = actions.preview_scrolling_up,
         ["<C-d>"] = actions.preview_scrolling_down,
@@ -57,6 +57,7 @@ telescope.setup(astronvim.user_plugin_opts("plugins.telescope", {
         ["<C-q>"] = actions.send_to_qflist + actions.open_qflist,
         ["<M-q>"] = actions.send_selected_to_qflist + actions.open_qflist,
         ["<C-l>"] = actions.complete_tag,
+        ["<c-t>"] = trouble.open_with_trouble
       },
 
       n = {
@@ -64,7 +65,6 @@ telescope.setup(astronvim.user_plugin_opts("plugins.telescope", {
         ["<CR>"] = actions.select_default,
         ["<C-x>"] = actions.select_horizontal,
         ["<C-v>"] = actions.select_vertical,
-        ["<C-t>"] = actions.select_tab,
 
         ["<Tab>"] = actions.toggle_selection + actions.move_selection_worse,
         ["<S-Tab>"] = actions.toggle_selection + actions.move_selection_better,
@@ -87,6 +87,8 @@ telescope.setup(astronvim.user_plugin_opts("plugins.telescope", {
 
         ["<PageUp>"] = actions.results_scrolling_up,
         ["<PageDown>"] = actions.results_scrolling_down,
+
+        ["<c-t>"] = trouble.open_with_trouble
       },
     },
   },
