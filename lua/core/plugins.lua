@@ -68,7 +68,7 @@ local astro_plugins = {
   },
   
   -- Focus window manager
-  --["beauwilliams/focus.nvim"] = {},
+  ["beauwilliams/focus.nvim"] = {},
 
   -- haya14busa/is.vim
   ['haya14busa/is.vim'] = {},
@@ -77,7 +77,7 @@ local astro_plugins = {
   ['kylechui/nvim-surround'] = {},
 
   -- nvim shade
-  ['sunjon/shade.nvim'] = {},
+  -- ['sunjon/shade.nvim'] = {},
 
   -- substitute 
   ['gbprod/substitute.nvim'] = {},
