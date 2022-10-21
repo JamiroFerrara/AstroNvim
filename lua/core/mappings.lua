@@ -227,8 +227,7 @@ maps.t["<C-l>"] = { "<c-\\><c-n><c-w>l", desc = "Terminal right window naviation
 maps.n["<leader>xx"] = { "<cmd>TroubleToggle<cr>", desc = "Opens trouble error diagnostics" }
 maps.n["<leader>xw"] = { "<cmd>TroubleToggle workspace_diagnostics<cr>", desc = "Opens trouble workspace_diagnostics" }
 maps.n["<leader>xd"] = { "<cmd>TroubleToggle document_diagnostics<cr>", desc = "Opens trouble document_diagnostics" }
-maps.n["<leader>xn"] = { "require('trouble').next({skip_groups = true, jump = true});", desc = "Jumps to next error" }
-maps.n["<leader>e"] = { "require('trouble').next({skip_groups = true, jump = true});", desc = "Jumps to next error" }
+maps.n["<leader>xn"] = { "<cmd>lua require('trouble').next({skip_groups = true, jump = true})<cr>", desc = "Jumps to next error" }
 maps.n["<leader>E"] = { "<cmd>TroubleToggle document_diagnostics<cr>", desc = "Opens trouble document_diagnostics" }
 maps.n["<leader>xq"] = { "<cmd>TroubleToggle quickfix", desc = "Opens trouble quickfix" }
 maps.n["<leader>xl"] = { "<cmd>TroubleToggle loclist<cr>", desc = "Opens trouble loclist" }
