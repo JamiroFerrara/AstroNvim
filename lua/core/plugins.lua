@@ -36,7 +36,7 @@ local astro_plugins = {
   ['OmniSharp/omnisharp-vim'] = {},
 
   -- Focus window manager
-  ["beauwilliams/focus.nvim"] = {},
+  --["beauwilliams/focus.nvim"] = {},
 
   -- haya14busa/is.vim
   ['haya14busa/is.vim'] = {},
