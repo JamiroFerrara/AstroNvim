@@ -59,7 +59,14 @@ local astro_plugins = {
 			)
 		end,
   },
-
+  
+  --Wilder nvim 
+  ['roxma/nvim-yarp'] = {
+    cmd = { 
+      "pip install -r requirements.txt",
+    }
+  },
+  
   -- Focus window manager
   --["beauwilliams/focus.nvim"] = {},
 

@@ -150,7 +150,7 @@ if is_available "aerial.nvim" then maps.n["<leader>lS"] = { "<cmd>AerialToggle<c
 -- Telescope
 if is_available "telescope.nvim" then
   maps.n["<leader>fw"] = { function() require("telescope.builtin").live_grep() end, desc = "Search words" }
-  maps.n["s"] = { function() require("telescope.builtin").current_buffer_fuzzy_find() end, desc = "Search words" }
+  maps.n["s"] = { function() require("telescope.builtin").current_buffer_fuzzy_find() end, desc = "Find in file" }
   maps.n["S"] = { function() require("telescope.builtin").live_grep({search_dirs={vim.fn.expand("%:p")}}) end, desc = "Search words" }
   maps.n["<leader>fW"] = {
     function()
