@@ -150,8 +150,7 @@ if is_available "aerial.nvim" then maps.n["<leader>lS"] = { "<cmd>AerialToggle<c
 -- Telescope
 if is_available "telescope.nvim" then
   maps.n["<leader>fw"] = { function() require("telescope.builtin").live_grep() end, desc = "Search words" }
-  maps.n["s"] = { function() require("telescope.builtin").current_buffer_fuzzy_find() end, desc = "Find in file" }
-  maps.n["S"] = { function() require("telescope.builtin").live_grep({search_dirs={vim.fn.expand("%:p")}}) end, desc = "Search words" }
+  maps.n["S"] = { function() require("telescope.builtin").current_buffer_fuzzy_find() end, desc = "Find in file" }
   maps.n["<leader>fW"] = {
     function()
       require("telescope.builtin").live_grep {
@@ -208,7 +207,7 @@ if is_available "toggleterm.nvim" then
   maps.n["<leader>tt"] = { function() toggle_term_cmd "htop" end, desc = "ToggleTerm htop" }
   maps.n["<leader>tp"] = { function() toggle_term_cmd "python" end, desc = "ToggleTerm python" }
   maps.n["<leader>tl"] = { function() toggle_term_cmd "lazygit" end, desc = "ToggleTerm lazygit" }
-  maps.n["<leader>tf"] = { "<cmd>ToggleTerm direction=float<cr>", desc = "ToggleTerm float" }
+  maps.n["<leader>tf"] = { "<cmd>ToggleTerm size=20 direction=float<cr>", desc = "ToggleTerm float" }
   maps.n["<leader>th"] = { "<cmd>ToggleTerm size=10 direction=horizontal<cr>", desc = "ToggleTerm horizontal split" }
   maps.n["<leader>tv"] = { "<cmd>ToggleTerm size=80 direction=vertical<cr>", desc = "ToggleTerm vertical split" }
 end
