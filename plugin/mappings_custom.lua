@@ -30,6 +30,8 @@ map('i', 'jj', '<esc>:w<cr>', {noremap = false, silent = false})
 map('i', 'jJ', '<esc>:q!<cr>', {noremap = false, silent = false})
 
 map('i', 'jk', '<esc><S-a>', {noremap = false, silent = false})
+map('i', 'jK', '<esc><S-a><space>', {noremap = true, silent = false})
+
 map('i', 'jè', '<esc><S-a>{<enter><esc>ddO', {noremap = false, silent = false})
 map('i', 'ji', '<esc>lli<space>', {noremap = false, silent = false})
 map('i', 'jo', '<esc>o', {noremap = false, silent = false})

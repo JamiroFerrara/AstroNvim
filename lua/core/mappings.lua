@@ -193,7 +193,7 @@ if is_available "telescope.nvim" then
     end,
     desc = "Search symbols",
   }
-  maps.n["<leader>lR"] = { function() require("telescope.builtin").lsp_references() end, desc = "Search references" }
+  maps.n["gr"] = { function() require("telescope.builtin").lsp_references() end, desc = "Search references" }
   maps.n["<leader>lD"] = { function() require("telescope.builtin").diagnostics() end, desc = "Search diagnostics" }
 end
 
