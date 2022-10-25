@@ -57,6 +57,7 @@ vim.o.laststatus = 2
 vim.api.nvim_command('set noruler')
 vim.api.nvim_command('set autoread')
 vim.api.nvim_command('au FocusGained,BufEnter * :checktime')
+vim.api.nvim_command('au FocusGained,BufEnter * :set scrolloff=15')
 vim.api.nvim_command('set noshowmode')
 vim.api.nvim_command('set nofixendofline')
 vim.api.nvim_command('set nostartofline')
