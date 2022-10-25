@@ -4,6 +4,8 @@ map('v', '<', '<gv', {noremap = true, silent = false})
 map('v', '>', '>gv', {noremap = true, silent = false})
 map('n', 'ga', '%', {noremap = true, silent = false})
 map('v', 'ga', '%', {noremap = true, silent = false})
+map('v', 'gA', '%%', {noremap = true, silent = false})
+map('v', 'gA', '%%', {noremap = true, silent = false})
 
 map('v', 'y', 'myy`y', {noremap = true, silent = false})
 map('v', 'Y', 'myY`y', {noremap = true, silent = false})
