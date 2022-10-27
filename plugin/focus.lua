@@ -1,6 +1,6 @@
 -- Enable auto highlighting for focussed/unfocussed windows
 -- Default: false
-require("focus").setup({winhighlight = true, excluded_filetypes = {"toggleterm, harpoon.ui"}})
+require("focus").setup({winhighlight = true, excluded_filetypes = {"toggleterm, harpoon-menu"}})
 
 -- By default, the highlight groups are setup as such:
 --   hi default link FocusedWindow VertSplit
