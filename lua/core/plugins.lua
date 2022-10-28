@@ -32,9 +32,6 @@ local astro_plugins = {
   -- Lightspeed
   ['ggandor/lightspeed.nvim'] = {},
 
-  -- Omnisharp-vim
-  ['OmniSharp/omnisharp-vim'] = {},
-
   --Wilder nvim 
   ['gelguy/wilder.nvim'] = {
 		config = function()
@@ -168,6 +165,8 @@ local astro_plugins = {
     },
     config = function() require "configs.treesitter" end,
   },
+
+  ["nvim-treesitter/playground"] = {},
 
   -- Snippet collection
   ["rafamadriz/friendly-snippets"] = { opt = true },
