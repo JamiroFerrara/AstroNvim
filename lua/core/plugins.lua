@@ -150,7 +150,7 @@ local astro_plugins = {
   ["JoosepAlviste/nvim-ts-context-commentstring"] = { after = "nvim-treesitter" },
 
   -- Syntax highlighting
-  ["nvim-treesitter/nvim-treesitter"] = {
+  ["JamiroFerrara/nvim-treesitter"] = {
     run = ":TSUpdate",
     event = { "BufRead", "BufNewFile" },
     cmd = {
