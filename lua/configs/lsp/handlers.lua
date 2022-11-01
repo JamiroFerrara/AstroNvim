@@ -13,7 +13,6 @@ astronvim.lsp.on_attach = function(client, bufnr)
         ["gD"] = { function() vim.lsp.buf.declaration() end, desc = "Declaration of current symbol" },
         ["gI"] = { function() vim.lsp.buf.implementation() end, desc = "Implementation of current symbol" },
         ["gd"] = { function() vim.lsp.buf.definition() end, desc = "Show the definition of current symbol" },
-        ["gr"] = { function() vim.lsp.buf.references() end, desc = "References of current symbol" },
         ["<leader>ld"] = { function() vim.diagnostic.open_float() end, desc = "Hover diagnostics" },
         ["[d"] = { function() vim.diagnostic.goto_prev() end, desc = "Previous diagnostic" },
         ["]d"] = { function() vim.diagnostic.goto_next() end, desc = "Next diagnostic" },

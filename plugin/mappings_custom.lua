@@ -2,6 +2,10 @@ local map = vim.api.nvim_set_keymap
 
 map('v', '<', '<gv', {noremap = true, silent = false})
 map('v', '>', '>gv', {noremap = true, silent = false})
+map('n', 'ga', '%', {noremap = true, silent = false})
+map('v', 'ga', '%', {noremap = true, silent = false})
+map('v', 'gA', '%%', {noremap = true, silent = false})
+map('v', 'gA', '%%', {noremap = true, silent = false})
 
 map('v', 'y', 'myy`y', {noremap = true, silent = false})
 map('v', 'Y', 'myY`y', {noremap = true, silent = false})
@@ -13,7 +17,7 @@ map('n', 'N', 'Nzzzv', {noremap = true, silent = false})
 
 map('n', 'J', '<S-}>', {noremap = true, silent = false})
 map('n', 'K', '<S-{>', {noremap = true, silent = false})
-map('n', 'L', 'J', {noremap = true, silent = false})
+map('n', 'ç', 'J', {noremap = true, silent = false})
 
 --map('n', 's', '/', {noremap = true, silent = false})
 --map('n', 'S', '?', {noremap = true, silent = false})
@@ -28,8 +32,11 @@ map('n', '<leader>P', ':Prettier<cr>', {noremap = true, silent = false})
 
 map('i', 'jj', '<esc>:w<cr>', {noremap = false, silent = false})
 map('i', 'jJ', '<esc>:q!<cr>', {noremap = false, silent = false})
+map('i', 'jp', '<esc>:q!<cr>', {noremap = false, silent = false})
 
 map('i', 'jk', '<esc><S-a>', {noremap = false, silent = false})
+map('i', 'jK', '<esc><S-a><space>', {noremap = true, silent = false})
+
 map('i', 'jè', '<esc><S-a>{<enter><esc>ddO', {noremap = false, silent = false})
 map('i', 'ji', '<esc>lli<space>', {noremap = false, silent = false})
 map('i', 'jo', '<esc>o', {noremap = false, silent = false})
