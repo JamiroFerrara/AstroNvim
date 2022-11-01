@@ -18,7 +18,7 @@ local config = {
   },
 
   -- Set colorscheme
-  colorscheme = "github-theme",
+  colorscheme = "nord",
 
   -- Override highlight groups in any theme
   highlights = {

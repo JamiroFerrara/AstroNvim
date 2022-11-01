@@ -17,7 +17,11 @@ local astro_plugins = {
   -- Lua functions
   ["nvim-lua/plenary.nvim"] = { module = "plenary" },
 
-  -- Github Colorscheme
+  -- Themes
+  ["shaunsingh/nord.nvim"] = {
+    commit = "78f5f001709b5b321a35dcdc44549ef93185e024",
+  },
+
   ["projekt0n/github-nvim-theme"] = {},
 
   -- Popup API
@@ -60,11 +64,17 @@ local astro_plugins = {
 		end,
   },
   
-  --Wilder nvim 
+  --yarp nvim 
   ['roxma/nvim-yarp'] = {
     cmd = { 
       "pip install -r requirements.txt",
     }
+  },
+
+  -- Notification Enhancer
+  ["rcarriga/nvim-notify"] = {
+    event = "UIEnter",
+    config = function() require "configs.notify" end,
   },
   
   -- Focus window manager

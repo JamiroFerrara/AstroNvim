@@ -1,5 +1,5 @@
-  let g:neovide_transparency=0.8
-  let g:transparency=0.8
+  let g:neovide_transparency=0.9
+  let g:transparency=0.9
   hi cursorcolumn guibg=NONE ctermbg=NONE guifg=NONE ctermfg=NONE
   hi cursorline guibg=NONE ctermbg=NONE guifg=NONE ctermfg=NONE
   hi linenr guifg=#FFFFGF
