@@ -225,6 +225,7 @@ local astro_plugins = {
 
   -- LSP symbols
   ["stevearc/aerial.nvim"] = {
+    branch = "nvim-0.5",
     module = "aerial",
     cmd = { "AerialToggle", "AerialOpen", "AerialInfo" },
     config = function() require "configs.aerial" end,

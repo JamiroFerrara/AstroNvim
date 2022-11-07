@@ -15,8 +15,10 @@ map('n', 'Y', 'y$', {noremap = true, silent = false})
 map('n', 'n', 'nzzzv', {noremap = true, silent = false})
 map('n', 'N', 'Nzzzv', {noremap = true, silent = false})
 
-map('n', 'J', '<S-}>', {noremap = true, silent = false})
-map('n', 'K', '<S-{>', {noremap = true, silent = false})
+map('n', 'J', ':AerialNext<cr>', {noremap = true, silent = false})
+map('n', 'K', ':AerialPrev<cr>', {noremap = true, silent = false})
+map('n', '<C-J>', '}', {noremap = true, silent = false})
+map('n', '<C-K>', '{', {noremap = true, silent = false})
 map('n', 'ç', 'J', {noremap = true, silent = false})
 
 --map('n', 's', '/', {noremap = true, silent = false})
@@ -27,7 +29,7 @@ map('n', '<leader>f', ':HopWord<cr>', {noremap = true, silent = false})
 map('n', '<leader>d', '"ryiw/<C-r>r<cr>', {noremap = true, silent = false})
 
 map('n', '<leader>o', 'za', {noremap = true, silent = false})
-map('n', '<leader>b', '$j?{<cr>V%', {noremap = true, silent = false})
+map('n', '<leader>b', ':AerialPrev<cr>Vj%', {noremap = true, silent = false})
 map('n', '<leader>P', ':Prettier<cr>', {noremap = true, silent = false})
 
 map('i', 'jj', '<esc>:w<cr>', {noremap = false, silent = false})
