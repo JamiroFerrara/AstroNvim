@@ -40,7 +40,7 @@ vim.o.ignorecase = true
 vim.o.smartcase = true
 vim.o.list = true
 vim.o.scrolloff=15
-vim.o.sidescrolloff=15
+vim.o.sidescrolloff=45
 vim.o.splitright=true
 vim.o.confirm = true
 vim.o.exrc = true
@@ -58,6 +58,7 @@ vim.api.nvim_command('set noruler')
 vim.api.nvim_command('set autoread')
 vim.api.nvim_command('au FocusGained,BufEnter * :checktime')
 vim.api.nvim_command('au FocusGained,BufEnter * :set scrolloff=15')
+vim.api.nvim_command('au FocusGained,BufEnter * :set sidescrolloff=45')
 vim.api.nvim_command('au FocusGained,BufEnter * :set nowrap')
 vim.api.nvim_command('set noshowmode')
 vim.api.nvim_command('set nofixendofline')
