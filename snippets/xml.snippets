@@ -8,7 +8,7 @@ snippet textbox
 	<TextBox Text="$1"/>
 
 snippet grid2x2
-	<Grid>
+	<Grid Grid.Row="0" Grid.Column="0">
 		<Grid.ColumnDefinitions>
 			<ColumnDefinition Width="*"/>
 			<ColumnDefinition Width="*"/>
@@ -76,6 +76,37 @@ snippet groupbox
   </GroupBox>
 
 snippet border
-	<Border Grid.Row="1" Style="{StaticResource ContainerBorderNoHStretch}">
+	<Border Grid.Row="0" Style="{StaticResource ContainerBorderNoHStretch}">
 		$1
   </Border>
+
+snippet gridrow
+	Grid.Row="$1"
+
+snippet gridcolumn
+	Grid.Column="$1"
+
+snippet gridcolumnspan
+	Grid.ColumnSpan="$1"
+
+snippet gridrowspan
+	Grid.ColumnSpan="$1"
+
+snippet stackhorizontal
+	<StackPanel Orientation="Horizontal">
+		$1
+	</StackPanel>
+
+snippet stackvertical
+	<StackPanel Orientation="Vertical">
+		$1
+	</StackPanel>
+
+snippet background
+	Background="$1"
+
+snippet foreground
+	Foreground="$1"
+
+snippet cornerradius
+	CornerRadius="$1"

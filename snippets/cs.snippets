@@ -1,0 +1,52 @@
+snippet where 
+  Where(x => x.$1 == $2);
+
+snippet select 
+  Select(x => x.$1 == $2);
+
+snippet getset
+  { get; set; }
+
+snippet property
+  public $1 $2 { get; set; }
+
+snippet for
+  for (int i = 0; i < $1; i++)
+  {
+    $2
+  }
+
+snippet foreach
+  foreach (var $1 in $2)
+  {
+    $3
+  }
+
+snippet inlineforeach
+  Array.ForEach($1.ToArray(), x => { 
+    $2 
+  });
+
+snippet raisepropertychanged
+  RaisePropertyChanged();
+
+snippet observablecollection
+  ObservableCollection<$1> $2
+
+snippet if
+  if ($1)
+  {
+    $2
+  }
+
+snippet ifinline
+  $1 ? $2 : $3
+
+snippet add
+  Add($1);
+
+snippet remove
+  Remove($1);
+
+snippet clear
+  Clear();

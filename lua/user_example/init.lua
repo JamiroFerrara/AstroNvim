@@ -163,8 +163,8 @@ local config = {
   -- true == 1000
   cmp = {
     source_priority = {
-      nvim_lsp = 1000,
-      luasnip = 750,
+      luasnip = 1000,
+      nvim_lsp = 750,
       buffer = 500,
       path = 250,
     },
