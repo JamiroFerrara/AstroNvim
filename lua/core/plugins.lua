@@ -29,6 +29,9 @@ local astro_plugins = {
   -- Vim Wiki
   ["vimwiki/vimwiki"] = {},
 
+  -- Calendar
+  ["itchyny/calendar.vim"] = {},
+
   -- Lightspeed
   ['ggandor/lightspeed.nvim'] = {},
 
@@ -313,6 +316,7 @@ local astro_plugins = {
 
   -- Session manager
   ["Shatur/neovim-session-manager"] = {
+    commit = "4ce4d975313c73c3aa1410f2c918ce6fce900f01",
     module = "session_manager",
     cmd = "SessionManager",
     event = "BufWritePost",
