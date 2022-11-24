@@ -97,4 +97,7 @@ map('n', 'Q', '@', {noremap = true, silent = false})
 map('n', '<leader><leader>', ':e<cr>', {noremap = true, silent = false})
 map('n', 's', '/', {noremap = true, silent = false})
 
+map('i', '<c-j>', "<cmd>lua require'luasnip'.jump(1)<cr>", {noremap = true, silent = false})
+map('i', '<c-k>', "<cmd>lua require'luasnip'.jump(-1)<cr>", {noremap = true, silent = false})
+
 -- map('n', '<leader>r', ':s/\(w.*\)/', {noremap = true, silent = false})
