@@ -50,3 +50,47 @@ snippet remove
 
 snippet clear
   Clear();
+
+snippet class
+	public class ${1:`vim_snippets#Filename()`}
+	{
+		${0}
+	}
+
+snippet try
+	try
+	{
+		${0:${VISUAL}}
+	}
+	catch (${1:System.Exception})
+	{
+		throw;
+	}
+
+snippet usi
+	using (${1:resource})
+	{
+		${0}
+	}
+
+snippet cw
+	Console.WriteLine(${1});
+
+snippet namespace
+	namespace ${1:MyNamespace}
+	{
+		${0}
+	}
+
+snippet switch
+	switch (${1:switch_on})
+	{
+		${0}
+		default:
+	}
+
+snippet wh
+	while (${1:true})
+	{
+		${0:${VISUAL}}
+	}

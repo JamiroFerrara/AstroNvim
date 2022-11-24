@@ -110,3 +110,48 @@ snippet foreground
 
 snippet cornerradius
 	CornerRadius="$1"
+
+snippet center
+	HorizontalAlignment="Center" VerticalAlignment="Center"
+
+snippet horizontalalignement
+	HorizontalAlignment="$1"
+
+snippet verticalalignement
+	VerticalAlignment="$1"
+
+snippet datagrid
+	<DataGrid x:Name="dataGridInventory" IsReadOnly="True" EnableColumnVirtualization="True" EnableRowVirtualization="True" ScrollViewer.CanContentScroll="False" AutoGenerateColumns="False"
+          Grid.Row="0" 
+          materialDesign:DataGridAssist.CellPadding ="0" 
+          materialDesign:DataGridAssist.ColumnHeaderPadding="0" 
+          HeadersVisibility="None"
+          Visibility="{Binding IsLoading, Mode=TwoWay, Converter={StaticResource InverseBoolToVisibilityConverter}}"
+          ItemsSource="{Binding $1, Mode=OneWay, UpdateSourceTrigger=PropertyChanged , IsAsync=True}">
+      <DataGrid.CellStyle>
+          <Style TargetType="DataGridCell">
+              <Setter Property="Padding" Value="0"/>
+              <Setter Property="Margin" Value="0"/>
+              <Setter Property="Template">
+                  <Setter.Value>
+                      <ControlTemplate TargetType="{x:Type DataGridCell}">
+                          <Border Padding="{TemplateBinding Padding}" Margin="{TemplateBinding Margin}" SnapsToDevicePixels="True">
+                              <ContentPresenter SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" Cursor="Hand"/>
+                          </Border>
+                      </ControlTemplate>
+                  </Setter.Value>
+              </Setter>
+          </Style>
+      </DataGrid.CellStyle>
+      <DataGrid.Columns>
+          <DataGridTemplateColumn>
+              <DataGridTemplateColumn.CellTemplate>
+                  <DataTemplate>
+
+                  <TextBlock Text="$2"/>
+
+                  </DataTemplate>
+              </DataGridTemplateColumn.CellTemplate>
+          </DataGridTemplateColumn>
+      </DataGrid.Columns>
+  </DataGrid>
