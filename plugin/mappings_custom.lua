@@ -100,4 +100,6 @@ map('n', 's', '/', {noremap = true, silent = false})
 map('i', '<c-j>', "<cmd>lua require'luasnip'.jump(1)<cr>", {noremap = true, silent = false})
 map('i', '<c-k>', "<cmd>lua require'luasnip'.jump(-1)<cr>", {noremap = true, silent = false})
 
+map('n', '<C-e>', '<cmd>lua require("luasnip.loaders").edit_snippet_files()<cr><cr>")', {noremap = true, silent = false})
+
 -- map('n', '<leader>r', ':s/\(w.*\)/', {noremap = true, silent = false})

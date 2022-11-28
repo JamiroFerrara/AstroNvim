@@ -1,5 +1,7 @@
 snippet button
-	<Button Text="$1"/>
+  <Button x:Name="$0" IsDefault="True" Style="{StaticResource MaterialDesignFloatingActionMiniDarkButton}" ToolTip="$2">
+      <materialDesign:PackIcon Kind="$1" Height="24" Width="24" />
+  </Button>
 
 snippet textblock
 	<TextBlock Text="$1"/>
@@ -71,7 +73,7 @@ snippet usercontrol
 	</ucuilib:UCUIBaseClass>
 
 snippet groupbox
-	<GroupBox DataContext="{StaticResource ViewModel}" Header="$1" Margin="16" BorderThickness="0">
+  <GroupBox DataContext="{StaticResource ViewModel}" Header="PT Restitutions" Margin="16" BorderThickness="2" Style="{x:Null}" BorderBrush="#3f51b5" >
 		$2
   </GroupBox>
 
@@ -155,3 +157,17 @@ snippet datagrid
           </DataGridTemplateColumn>
       </DataGrid.Columns>
   </DataGrid>
+
+snippet stylenull
+	Style="{x:Null}"
+
+snippet combobox
+  <ComboBox Margin="10" Height="48" Width="300" Text=".."
+      ItemsSource="{Binding $1, ElementName=this}"
+      DisplayMemberPath="$2"
+      VerticalAlignment="Center" IsEditable="True"
+      Style="{StaticResource MaterialDesignFloatingHintComboBox}"
+      IsTextSearchEnabled="False"
+      IsEnabled="True"
+      Foreground="Black"
+      />
