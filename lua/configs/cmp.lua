@@ -58,10 +58,12 @@ setup(astronvim.user_plugin_opts("plugins.cmp", {
     behavior = cmp.ConfirmBehavior.Replace,
     select = false,
   },
+  experimental = {
+    ghost_text = true,
+  },
   window = {
-    documentation = {
-      border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
-    },
+    completion = cmp.config.window.bordered(),
+    documentation = cmp.config.window.bordered(),
   },
   mapping = {
     ["<Up>"] = cmp.mapping.select_prev_item(),
