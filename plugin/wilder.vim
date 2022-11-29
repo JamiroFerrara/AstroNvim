@@ -1,14 +1,4 @@
 " ++once supported in Nvim 0.4+ and Vim 8.1+
-autocmd CmdlineEnter * ++once call s:wilder_init() | call wilder#main#start()
-
-function! s:wilder_init() abort
-  call wilder#setup(...)
-  call wilder#set_option(..., ...)
-
-  call wilder#set_option('pipeline', ...)
-  call wilder#set_option('renderer', ...)
-endfunction
-
 call wilder#setup({'modes': [':', '/', '?']})
 
 call wilder#set_option('pipeline', [
