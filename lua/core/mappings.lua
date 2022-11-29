@@ -110,7 +110,7 @@ if is_available "neovim-session-manager" then
   maps.n["<leader>sl"] = { "<cmd>SessionManager! load_last_session<cr>", desc = "Load last session" }
   maps.n["<leader>ss"] = { "<cmd>SessionManager! save_current_session<cr>", desc = "Save this session" }
   maps.n["<leader>sd"] = { "<cmd>SessionManager! delete_session<cr>", desc = "Delete session" }
-  maps.n["<leader>sf"] = { "<cmd>SessionManager! load_session<cr> ", desc = "Search sessions" }
+  maps.n["<leader>sf"] = { "<cmd>SessionManager! save_current_session<cr><cmd>SessionManager! load_session<cr> ", desc = "Search sessions" }
   maps.n["<leader>S."] =
     { "<cmd>SessionManager! load_current_dir_session<cr>", desc = "Load current directory session" }
 end
@@ -151,7 +151,7 @@ if is_available "aerial.nvim" then maps.n["<leader>lS"] = { "<cmd>AerialToggle<c
 -- Telescope
 if is_available "telescope.nvim" then
   maps.n["<leader>fw"] = { function() require("telescope.builtin").live_grep() end, desc = "Search words" }
-  maps.n["S"] = { function() require("telescope.builtin").current_buffer_fuzzy_find() end, desc = "Find in file" }
+  maps.n["<C-f>"] = { function() require("telescope.builtin").current_buffer_fuzzy_find() end, desc = "Find in file" }
   maps.n["<leader>fW"] = {
     function()
       require("telescope.builtin").live_grep {

@@ -25,7 +25,6 @@ map('n', 'ç', 'J', {noremap = true, silent = false})
 --map('n', 'S', '?', {noremap = true, silent = false})
 map('n', 'f', '<Plug>Lightspeed_s', {noremap = true, silent = false})
 map('n', 'F', '<Plug>Lightspeed_S', {noremap = true, silent = false})
-map('n', '<leader>f', ':HopWord<cr>', {noremap = true, silent = false})
 map('n', '<leader>d', '"ryiw/<C-r>r<cr>', {noremap = true, silent = false})
 
 map('n', '<leader>o', 'za', {noremap = true, silent = false})
