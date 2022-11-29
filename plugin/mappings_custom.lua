@@ -103,17 +103,23 @@ map('n', '<C-e>', '<cmd>lua require("luasnip.loaders").edit_snippet_files()<cr><
 
 
 local Terminal  = require('toggleterm.terminal').Terminal
-local cheatsh = Terminal:new({ cmd = "pwsh -Command cheat_nvim", hidden = true })
-local cs_build = Terminal:new({ cmd = "pwsh -Command build", hidden = true })
-local cs_debug = Terminal:new({ cmd = "pwsh -Command debug", hidden = true })
+local cheatsh = Terminal:new({ cmd = "pwsh -Command cheat_nvim", hidden = true, direction = "vertical", size = 100 })
+local cs_build = Terminal:new({ cmd = "pwsh -Command build", hidden = true, direction = "vertical", size = 100 })
+local cs_debug = Terminal:new({ cmd = "pwsh -Command debug", hidden = true, direction = "vertical", size = 100 })
+local git_pull = Terminal:new({ cmd = "pwsh -Command git pull", hidden = true, direction = "vertical", size = 100  })
+local git_cz = Terminal:new({ cmd = "pwsh -Command cz", hidden = true,  direction = "vertical", size = 100  })
 
 function _cheat_toggle() cheatsh:toggle() end
 function _cs_build() cs_build:toggle() end
 function _cs_debug() cs_debug:toggle() end
+function _git_pull() git_pull:toggle() end
+function _git_cz() git_cz:toggle() end
 
 map("n", "<leader>ch", "<cmd>lua _cheat_toggle()<CR>", {noremap = true, silent = true})
 map("n", "<leader>fh", "<cmd>lua _cheat_toggle()<CR>", {noremap = true, silent = true})
 map("n", "<leader>cb", "<cmd>lua _cs_build()<CR>", {noremap = true, silent = true})
 map("n", "<leader>cd", "<cmd>lua _cs_debug()<CR>", {noremap = true, silent = true})
+map("n", "<leader>gp", "<cmd>lua _git_pull()<CR>", {noremap = true, silent = true})
+map("n", "<leader>gz", "<cmd>lua _git_cz()<CR>", {noremap = true, silent = true})
 
 -- map('n', '<leader>r', ':s/\(w.*\)/', {noremap = true, silent = false})
