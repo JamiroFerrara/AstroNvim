@@ -101,4 +101,19 @@ map('i', '<c-k>', "<cmd>lua require'luasnip'.jump(-1)<cr>", {noremap = true, sil
 
 map('n', '<C-e>', '<cmd>lua require("luasnip.loaders").edit_snippet_files()<cr><cr>")', {noremap = true, silent = false})
 
+
+local Terminal  = require('toggleterm.terminal').Terminal
+local cheatsh = Terminal:new({ cmd = "pwsh -Command cheat_nvim", hidden = true })
+local cs_build = Terminal:new({ cmd = "pwsh -Command build", hidden = true })
+local cs_debug = Terminal:new({ cmd = "pwsh -Command debug", hidden = true })
+
+function _cheat_toggle() cheatsh:toggle() end
+function _cs_build() cs_build:toggle() end
+function _cs_debug() cs_debug:toggle() end
+
+map("n", "<leader>ch", "<cmd>lua _cheat_toggle()<CR>", {noremap = true, silent = true})
+map("n", "<leader>fh", "<cmd>lua _cheat_toggle()<CR>", {noremap = true, silent = true})
+map("n", "<leader>cb", "<cmd>lua _cs_build()<CR>", {noremap = true, silent = true})
+map("n", "<leader>cd", "<cmd>lua _cs_debug()<CR>", {noremap = true, silent = true})
+
 -- map('n', '<leader>r', ':s/\(w.*\)/', {noremap = true, silent = false})
