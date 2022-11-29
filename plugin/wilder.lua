@@ -26,6 +26,6 @@ wilder.set_option('renderer', wilder.popupmenu_renderer(
     highlighter = wilder.highlighter_with_gradient({
       wilder.basic_highlighter(), -- or wilder.lua_fzy_highlighter(),
     }),
-    reverse = 1,        -- if 1, shows the candidates from bottom to top
+    reverse = 0,        -- if 1, shows the candidates from bottom to top
   })
 ))

@@ -4,6 +4,7 @@
   hi cursorline guibg=NONE ctermbg=NONE guifg=NONE ctermfg=NONE
   hi linenr guifg=#FFFFGF
   hi cursorlinenr guifg=#FFFFFF
+  hi StatusLineNC guibg=#2c323a
 
   hi telescopenormal guibg=NONE
   hi telescopepromptnormal guibg=NONE
