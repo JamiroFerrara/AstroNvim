@@ -110,7 +110,7 @@ if is_available "neovim-session-manager" then
   maps.n["<leader>sl"] = { "<cmd>SessionManager! load_last_session<cr>", desc = "Load last session" }
   maps.n["<leader>ss"] = { "<cmd>SessionManager! save_current_session<cr>", desc = "Save this session" }
   maps.n["<leader>sd"] = { "<cmd>SessionManager! delete_session<cr>", desc = "Delete session" }
-  maps.n["<leader>sf"] = { "<cmd>SessionManager! save_current_session<cr><cmd>SessionManager! load_session<cr> ", desc = "Search sessions" }
+  maps.n["<leader>sf"] = { "zR<cmd>SessionManager! save_current_session<cr><cmd>SessionManager! load_session<cr> ", desc = "Search sessions" }
   maps.n["<leader>S."] =
     { "<cmd>SessionManager! load_current_dir_session<cr>", desc = "Load current directory session" }
 end

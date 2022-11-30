@@ -27,7 +27,9 @@ map('n', 'f', '<Plug>Lightspeed_s', {noremap = true, silent = false})
 map('n', 'F', '<Plug>Lightspeed_S', {noremap = true, silent = false})
 map('n', '<leader>d', '"ryiw/<C-r>r<cr>', {noremap = true, silent = false})
 
-map('n', '<leader>o', 'za', {noremap = true, silent = false})
+map('n', '<leader>oo', 'za', {noremap = true, silent = false})
+map('n', '<leader>oc', '<cmd>AerialTreeSyncFolds<cr>zRzm', {noremap = true, silent = false})
+map('n', '<leader>oa', '<cmd>AerialTreeSyncFolds<cr>zR', {noremap = true, silent = false})
 map('n', '<leader>b', ':AerialPrev<cr>Vj%', {noremap = true, silent = false})
 map('n', '<leader>P', ':Prettier<cr>', {noremap = true, silent = false})
 
@@ -100,7 +102,6 @@ map('i', '<c-j>', "<cmd>lua require'luasnip'.jump(1)<cr>", {noremap = true, sile
 map('i', '<c-k>', "<cmd>lua require'luasnip'.jump(-1)<cr>", {noremap = true, silent = false})
 
 map('n', '<C-e>', '<cmd>lua require("luasnip.loaders").edit_snippet_files()<cr><cr>")', {noremap = true, silent = false})
-
 
 local Terminal  = require('toggleterm.terminal').Terminal
 local cheatsh = Terminal:new({ cmd = "pwsh -Command cheat_nvim", hidden = true, direction = "vertical", size = 300 })
