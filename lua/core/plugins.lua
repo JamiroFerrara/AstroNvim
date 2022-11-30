@@ -11,6 +11,9 @@ local astro_plugins = {
   -- Nvim Comment
   ["terrortylor/nvim-comment"] = {},
 
+  -- Pretty-Fold
+  ['anuvyklack/pretty-fold.nvim'] = {},
+
   -- Css Color
   ["ap/vim-css-color"] = {},
 
@@ -37,11 +40,7 @@ local astro_plugins = {
 
   --Wilder nvim 
   ['gelguy/wilder.nvim'] = { },
-
-  --Wilder nvim 
   ['romgrk/fzy-lua-native'] = { },
-  
-  --Wilder nvim 
   ['roxma/nvim-yarp'] = {
     cmd = { 
       "pip install -r requirements.txt",

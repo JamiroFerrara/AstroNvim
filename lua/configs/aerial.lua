@@ -40,6 +40,10 @@ aerial.setup(astronvim.user_plugin_opts("plugins.aerial", {
     nested_top = "│ ",
     whitespace = "  ",
   },
+  -- Use symbol tree for folding. Set to true or false to enable/disable
+  -- Set to "auto" to manage folds if your previous foldmethod was 'manual'
+  -- This can be a filetype map (see :help aerial-filetype-map)
+  manage_folds = true,
   on_attach = function(bufnr)
     -- Jump forwards/backwards with '{' and '}'
     vim.keymap.set("n", "{", "<cmd>AerialPrev<cr>", { buffer = bufnr, desc = "Jump backwards in Aerial" })

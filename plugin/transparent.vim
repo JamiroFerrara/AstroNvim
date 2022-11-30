@@ -5,6 +5,7 @@
   hi linenr guifg=#FFFFGF
   hi cursorlinenr guifg=#FFFFFF
   hi StatusLineNC guibg=#2c323a
+  hi Folded guibg=#2c323a
 
   hi telescopenormal guibg=NONE
   hi telescopepromptnormal guibg=NONE

@@ -75,9 +75,6 @@ vim.api.nvim_command('set noswapfile')
 vim.api.nvim_command('set nospell')
 
 vim.api.nvim_command('set foldmethod=syntax')
-vim.api.nvim_command('set foldnestmax=1')
-vim.api.nvim_command('set nofoldenable')
-vim.api.nvim_command('set foldlevel=2')
 
 vim.g.mapleader = " "
 
