@@ -6,6 +6,8 @@
   hi cursorlinenr guifg=#FFFFFF
   hi StatusLineNC guibg=#2c323a
   hi Folded guibg=#2c323a guifg=NONE
+  hi NeotreeNormal guibg=none
+  hi NeotreeNormalNC guibg=none
 
   hi telescopenormal guibg=NONE
   hi telescopepromptnormal guibg=NONE

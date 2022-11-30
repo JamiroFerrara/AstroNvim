@@ -7,7 +7,7 @@ maps[""]["<Space>"] = "<Nop>"
 -- Normal --
 -- Standard Operations
 maps.n["<leader>w"] = { "<cmd>w<cr>", desc = "Save" }
-maps.n["<leader>q"] = { "<cmd>q<cr>", desc = "Quit" }
+maps.n["<leader>q"] = { "<cmd>SessionManager! save_current_session<cr><cmd>q<cr>", desc = "Quit" }
 maps.n["<A-q>"] = { "<cmd>q<cr>", desc = "Quit" }
 maps.n["f"] = { "/" }
 maps.n["F"] = { "?" }
