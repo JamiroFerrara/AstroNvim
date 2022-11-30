@@ -109,19 +109,28 @@ local cs_build = Terminal:new({ cmd = "pwsh -Command build", hidden = true, dire
 local cs_debug = Terminal:new({ cmd = "pwsh -Command debug", hidden = true, direction = "vertical", size = 100 })
 local git_pull = Terminal:new({ cmd = "pwsh -Command git pull", hidden = true, direction = "vertical", size = 100  })
 local git_cz = Terminal:new({ cmd = "pwsh -Command cz", hidden = true,  direction = "vertical", size = 100  })
+local cargo_run = Terminal:new({ cmd = "pwsh -Command cargo run", hidden = true,  direction = "vertical", size = 100  })
+local cargo_build = Terminal:new({ cmd = "pwsh -Command cargo build --release", hidden = true,  direction = "vertical", size = 100  })
 
 function _cheat_toggle() cheatsh:toggle() end
 function _cs_build() cs_build:toggle() end
 function _cs_debug() cs_debug:toggle() end
 function _git_pull() git_pull:toggle() end
 function _git_cz() git_cz:toggle() end
+function _cargo_run() cargo_run:toggle() end
+function _cargo_build() cargo_build:toggle() end
 
 map("n", "<leader>ch", "<cmd>lua _cheat_toggle()<CR>", {noremap = true, silent = true})
 map("n", "<leader>fh", "<cmd>lua _cheat_toggle()<CR>", {noremap = true, silent = true})
+
 map("n", "<leader>cb", "<cmd>lua _cs_build()<CR>", {noremap = true, silent = true})
 map("n", "<leader>cd", "<cmd>lua _cs_debug()<CR>", {noremap = true, silent = true})
+
 map("n", "<leader>gp", "<cmd>lua _git_pull()<CR>", {noremap = true, silent = true})
 map("n", "<leader>gz", "<cmd>lua _git_cz()<CR>", {noremap = true, silent = true})
+
+map("n", "<leader>rr", "<cmd>lua _cargo_run()<CR>", {noremap = true, silent = true})
+map("n", "<leader>rb", "<cmd>lua _cargo_build()<CR>", {noremap = true, silent = true})
 
 map("t", "<esc>", '<C-\\><C-n>:q<cr>', {noremap = true, silent = true})
 map("t", "<leader>q", '<C-\\><C-n>:q<cr>', {noremap = true, silent = true})
