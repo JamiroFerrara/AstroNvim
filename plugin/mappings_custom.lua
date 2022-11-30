@@ -103,7 +103,7 @@ map('n', '<C-e>', '<cmd>lua require("luasnip.loaders").edit_snippet_files()<cr><
 
 
 local Terminal  = require('toggleterm.terminal').Terminal
-local cheatsh = Terminal:new({ cmd = "pwsh -Command cheat_nvim", hidden = true, direction = "vertical", size = 100 })
+local cheatsh = Terminal:new({ cmd = "pwsh -Command cheat_nvim", hidden = true, direction = "vertical", size = 300 })
 local cs_build = Terminal:new({ cmd = "pwsh -Command build", hidden = true, direction = "vertical", size = 100 })
 local cs_debug = Terminal:new({ cmd = "pwsh -Command debug", hidden = true, direction = "vertical", size = 100 })
 local git_pull = Terminal:new({ cmd = "pwsh -Command git pull", hidden = true, direction = "vertical", size = 100  })
@@ -121,5 +121,13 @@ map("n", "<leader>cb", "<cmd>lua _cs_build()<CR>", {noremap = true, silent = tru
 map("n", "<leader>cd", "<cmd>lua _cs_debug()<CR>", {noremap = true, silent = true})
 map("n", "<leader>gp", "<cmd>lua _git_pull()<CR>", {noremap = true, silent = true})
 map("n", "<leader>gz", "<cmd>lua _git_cz()<CR>", {noremap = true, silent = true})
+
+map("t", "<esc>", '<C-\\><C-n>:q<cr>', {noremap = true, silent = true})
+map("t", "<leader>q", '<C-\\><C-n>:q<cr>', {noremap = true, silent = true})
+map("t", "<A-q>", '<C-\\><C-n>:q<cr>', {noremap = true, silent = true})
+map("t", "<C-h>", '<Cmd>wincmd h<cr>', {noremap = true, silent = true})
+map("t", "<C-j>", '<Cmd>wincmd j<cr>', {noremap = true, silent = true})
+map("t", "<C-k>", '<Cmd>wincmd k<cr>', {noremap = true, silent = true})
+map("t", "<C-l>", '<Cmd>wincmd l<cr>', {noremap = true, silent = true})
 
 -- map('n', '<leader>r', ':s/\(w.*\)/', {noremap = true, silent = false})
