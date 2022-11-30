@@ -29,7 +29,7 @@ map('n', '<leader>d', '"ryiw/<C-r>r<cr>', {noremap = true, silent = false})
 
 map('n', '<leader>oo', 'za', {noremap = true, silent = false})
 map('n', '<leader>oc', '<cmd>AerialTreeSyncFolds<cr>zRzm', {noremap = true, silent = false})
-map('n', '<leader>oa', '<cmd>AerialTreeSyncFolds<cr>zR', {noremap = true, silent = false})
+map('n', '<leader>oa', '<cmd>AerialTreeSyncFolds<cr>zRjk', {noremap = true, silent = false})
 map('n', '<leader>b', ':AerialPrev<cr>Vj%', {noremap = true, silent = false})
 map('n', '<leader>P', ':Prettier<cr>', {noremap = true, silent = false})
 
