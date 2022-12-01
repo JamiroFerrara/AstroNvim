@@ -95,7 +95,8 @@ map('n', '<bs>', 'b', {noremap = true, silent = false})
 map('n', '<esc>', '0', {noremap = true, silent = false})
 
 map('n', 'Q', '@', {noremap = true, silent = false})
-map('n', '<leader><leader>', ':e<cr>', {noremap = true, silent = false})
+map('n', '<leader><leader>', '@', {noremap = true, silent = false})
+map('n', '<C-r>', ':e<cr>', {noremap = true, silent = false})
 map('n', 's', '/', {noremap = true, silent = false})
 map('n', 'X', 's', {noremap = true, silent = false})
 
