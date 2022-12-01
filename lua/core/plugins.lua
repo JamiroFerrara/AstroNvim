@@ -74,6 +74,9 @@ local astro_plugins = {
     config = function() require "configs.dressing" end,
   },
 
+  -- Icon picker
+   ["ziontee113/icon-picker.nvim"] = {},
+
   -- Cursorhold fix
   ["antoinemadec/FixCursorHold.nvim"] = {
     event = { "BufRead", "BufNewFile" },
