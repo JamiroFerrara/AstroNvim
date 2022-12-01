@@ -28,6 +28,7 @@ map('n', 'F', '<Plug>Lightspeed_S', {noremap = true, silent = false})
 map('n', '<leader>d', '"ryiw/<C-r>r<cr>', {noremap = true, silent = false})
 
 map('n', '<leader>oo', 'za', {noremap = true, silent = false})
+map('n', '<C-o>', 'za', {noremap = true, silent = false})
 map('n', '<leader>oc', '<cmd>AerialTreeSyncFolds<cr>zRzm', {noremap = true, silent = false})
 map('n', '<leader>oa', '<cmd>AerialTreeSyncFolds<cr>zRjk', {noremap = true, silent = false})
 map('n', '<leader>b', ':AerialPrev<cr>Vj%', {noremap = true, silent = false})
