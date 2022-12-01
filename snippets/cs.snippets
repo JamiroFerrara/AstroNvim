@@ -36,7 +36,7 @@ snippet observablecollection
 snippet if
   if ($1)
   {
-    $2
+      $2
   }
 
 snippet ifinline
@@ -99,4 +99,32 @@ snippet dispose
   public void Dispose() 
   { 
     $1
+  }
+
+snippet getmodel
+  private $1 model => GetModel<$1>();
+
+snippet maincontainerset
+  MainContainerSet += OnMainContainerSet;
+
+snippet load
+  Load(async () => {
+      $1
+  });
+
+snippet modelload
+  model.Load(async () => {
+      $1
+  });
+
+snippet else
+  else 
+  {
+    $1
+  }
+
+snippet elseif
+  else if ($1)
+  {
+      $2
   }
