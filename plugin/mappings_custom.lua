@@ -97,6 +97,7 @@ map('n', '<esc>', '0', {noremap = true, silent = false})
 map('n', 'Q', '@', {noremap = true, silent = false})
 map('n', '<leader><leader>', ':e<cr>', {noremap = true, silent = false})
 map('n', 's', '/', {noremap = true, silent = false})
+map('n', 'X', 's', {noremap = true, silent = false})
 
 map('i', '<c-j>', "<cmd>lua require'luasnip'.jump(1)<cr>", {noremap = true, silent = false})
 map('i', '<c-k>', "<cmd>lua require'luasnip'.jump(-1)<cr>", {noremap = true, silent = false})
@@ -111,9 +112,10 @@ local cheatsh = Terminal:new({ cmd = "pwsh -Command cheat_nvim", hidden = true, 
 
 local cs_build = Terminal:new({ cmd = "pwsh -Command build", hidden = true, direction = "vertical", size = 50 })
 local cs_debug = Terminal:new({ cmd = "pwsh -Command debug", hidden = true, direction = "vertical", size = 50 })
+local cs_run = Terminal:new({ cmd = "pwsh -Command run", hidden = true, direction = "float", size = 50 })
 
 local git_pull = Terminal:new({ cmd = "pwsh -Command git pull", hidden = true, direction = "vertical", size = 50  })
-local git_cz = Terminal:new({ cmd = "pwsh -Command cz", hidden = true,  direction = "vertical", size = 50  })
+local git_cz = Terminal:new({ cmd = "pwsh -Command cz", hidden = true,  direction = "float", size = 50  })
 
 local cargo_run = Terminal:new({ cmd = "pwsh -Command cargo run", hidden = true,  direction = "vertical", size = 50  })
 local cargo_build_release = Terminal:new({ cmd = "pwsh -Command cargo build --release", hidden = true,  direction = "vertical", size = 50  })
@@ -126,6 +128,7 @@ function _cheat_toggle() cheatsh:toggle() end
 
 function _cs_build() cs_build:toggle() end
 function _cs_debug() cs_debug:toggle() end
+function _cs_run() cs_run:toggle() end
 
 function _git_pull() git_pull:toggle() end
 function _git_cz() git_cz:toggle() end
@@ -142,6 +145,7 @@ map("n", "<leader>fh", "<cmd>lua _cheat_toggle()<CR>", {noremap = true, silent =
 
 map("n", "<leader>cb", "<cmd>lua _cs_build()<CR>", {noremap = true, silent = true})
 map("n", "<leader>cd", "<cmd>lua _cs_debug()<CR>", {noremap = true, silent = true})
+map("n", "<leader>cr", "<cmd>lua _cs_run()<CR>", {noremap = true, silent = true})
 
 map("n", "<leader>gp", "<cmd>lua _git_pull()<CR>", {noremap = true, silent = true})
 map("n", "<leader>gz", "<cmd>lua _git_cz()<CR>", {noremap = true, silent = true})
