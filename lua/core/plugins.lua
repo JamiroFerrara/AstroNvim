@@ -80,9 +80,6 @@ local astro_plugins = {
   -- haya14busa/is.vim
   ['haya14busa/is.vim'] = {},
   
-  -- nvim/Surround
-  ['kylechui/nvim-surround'] = {},
-
   -- nvim shade
   -- ['sunjon/shade.nvim'] = {},
 
